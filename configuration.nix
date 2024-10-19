@@ -105,7 +105,7 @@
     #  wget
 
     (pkgs.writeShellScriptBin "print-hello" ''
-      echo "Initial system state! After this, we'll perform updates"
+      echo "Updated system state, performed over the network via nix rebuild"
     '')
   ];
 
