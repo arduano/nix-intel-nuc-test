@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -104,8 +104,10 @@
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
 
+    inputs.nsync.packages.x86_64-linux.nsync
+
     (pkgs.writeShellScriptBin "print-hello" ''
-      echo "Updated system state again, performed via an update payload"
+      echo "Updated system state, performed over the network via nix rebuild"
     '')
   ];
 
