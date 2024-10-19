@@ -107,7 +107,7 @@
     inputs.nsync.packages.x86_64-linux.nsync
 
     (pkgs.writeShellScriptBin "print-hello" ''
-      echo "Updated system state, performed over the network via nix rebuild"
+      echo "Updated system state again, performed locally via a payload file without internet access"
     '')
   ];
 
