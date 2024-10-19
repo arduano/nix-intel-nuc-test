@@ -105,7 +105,7 @@
     #  wget
 
     (pkgs.writeShellScriptBin "print-hello" ''
-      echo "Updated system state, performed over the network via nix rebuild"
+      echo "Updated system state again, performed via an update payload"
     '')
   ];
 
